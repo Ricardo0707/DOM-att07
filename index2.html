@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Digite um texto e clique no botão</h1>
+
+    <input type="text" id="meuTexto">
+    <button onclick="mostrarTexto()">Mostrar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarTexto() {
+            // pegar o valor digitado
+            var texto = document.getElementById("meuTexto").value;
+
+            // colocar o valor dentro do parágrafo
+            document.getElementById("resultado").innerText = texto;
+        }
+    </script>
+
+</body>
+</html>
